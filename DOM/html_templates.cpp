@@ -1,0 +1,68 @@
+#include "html_templates.h"
+
+std::string HTMLTemplates::getBasicTemplate() {
+    return "<!DOCTYPE html>\n"
+        "<html>\n"
+        "<head>\n"
+        "    <title>Example Document</title>\n"
+        "</head>\n"
+        "<body>\n"
+        "    <div id=\"content\">\n"
+        "        <h1>Hello World</h1>\n"
+        "        <p>This is a <strong>sample</strong> document.</p>\n"
+        "        <!-- This is a comment -->\n"
+        "        <p><![CDATA[This is <raw> data & won't be parsed]]></p>\n"
+        "    </div>\n"
+        "</body>\n"
+        "</html>";
+}
+
+std::string HTMLTemplates::getArticleTemplate() {
+    return "<!DOCTYPE html>\n"
+        "<html>\n"
+        "<head>\n"
+        "    <title>News Article</title>\n"
+        "</head>\n"
+        "<body>\n"
+        "    <article id=\"main-article\">\n"
+        "        <header>\n"
+        "            <h1>Breaking News</h1>\n"
+        "            <p class=\"author\">By John Smith</p>\n"
+        "        </header>\n"
+        "        <section>\n"
+        "            <p>This is the first paragraph of the article.</p>\n"
+        "            <p>This is the second paragraph with <em>emphasized</em> text.</p>\n"
+        "        </section>\n"
+        "        <footer>\n"
+        "            <p>Published: <time datetime=\"2023-05-12\">May 12, 2023</time></p>\n"
+        "        </footer>\n"
+        "    </article>\n"
+        "</body>\n"
+        "</html>";
+}
+
+std::string HTMLTemplates::getFormTemplate() {
+    return "<!DOCTYPE html>\n"
+        "<html>\n"
+        "<head>\n"
+        "    <title>Contact Form</title>\n"
+        "</head>\n"
+        "<body>\n"
+        "    <form id=\"contact-form\" action=\"/submit\" method=\"post\">\n"
+        "        <div class=\"form-group\">\n"
+        "            <label for=\"name\">Name:</label>\n"
+        "            <input type=\"text\" id=\"name\" name=\"name\" required>\n"
+        "        </div>\n"
+        "        <div class=\"form-group\">\n"
+        "            <label for=\"email\">Email:</label>\n"
+        "            <input type=\"email\" id=\"email\" name=\"email\" required>\n"
+        "        </div>\n"
+        "        <div class=\"form-group\">\n"
+        "            <label for=\"message\">Message:</label>\n"
+        "            <textarea id=\"message\" name=\"message\" rows=\"5\" required></textarea>\n"
+        "        </div>\n"
+        "        <button type=\"submit\">Send Message</button>\n"
+        "    </form>\n"
+        "</body>\n"
+        "</html>";
+}
